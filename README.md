@@ -4,6 +4,8 @@ The Department of Computer Science (COSC) and Software Engineering at the Univer
 an Intel RealSense D435 3D camera on it. The intention is that it will be able to complete a Mini-DARPA challenge travelling across campus. This project
 works towards that goal by implimenting object dection which can be used to naviagte the rover
 
+The methods used are detailed in the paper "MossLilley-COSC428.pdf"
+
 ## Getting Started
 
 Libraries Required for Object Detection
@@ -16,11 +18,15 @@ Libraries for Landrov Interaction
  - pickle
  - zmq
 
-Currently cloudfunction.py contains the functions used to manipulate the PointClouds
+cloudfunction.py contains the functions used to manipulate the PointClouds
 
 The other scripts used cloudfunctions.py in different contexts
 
-pcl_d435.py
+* pcl_d435.py is used when streaming data directly from an IntelRealSense D435 camera
+* pcl_vox.py is used on pre recorded point clouds
+* bag_collison.py is used to apply the method to pre-recorded bag files
+* landrov_server.py is adapted landrov_server code to send point cloud data
+
 
 
 ## Built With
